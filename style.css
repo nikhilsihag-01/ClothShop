@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* header*****************************/
+header{
+    background-image: url(css/photos/siyarams.webp);
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#top-heading{
+    position: absolute;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    top: 120px;
+    text-shadow: 0px 0px 10px black;
+    left: 100px;
+    line-height: 2;
+    width: 250px;
+    color: white !important;
+}
+
+/* nav*****************************/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+.nav-logo{
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 0px 10px 10px black;
+}
+
+.checkbtn{
+    font-size: 2rem;
+    line-height: 80px;
+    cursor: pointer;
+    cursor: pointer;
+    display: none;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+}
+
+#check{
+    display: none;
+}
+
+nav ul{
+    display: flex;
+    gap: 20px;
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+
+nav ul li a{
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+nav ul a:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.75);
+}
+
+.products{
+    width: 90%;
+    margin: auto;
+}    
+
+#product-h1{
+    text-align: center;
+    margin: 30px;
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: 2px solid black;
+}
+
+.product-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card{
+    height: 250px;
+    width: 250px;
+    position: relative;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0px 0px 10px black;
+    transition: all 0.5s;
+}
+
+.card:hover{
+    transform: rotate(10deg);
+}
+
+.card:hover .card-img{
+    transform: scale(1.1);
+}
+.card-img{
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+.card-img img{
+    width: 100%;
+    height: 100%;
+}
+.card-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.6s linear;
+    text-align: center;
+}
+/* When the card is hovered over, show the text */
+.card:hover .card-text{
+    opacity: 1;
+}
+/* founder*********************************/
+
+.founder{
+    width: 100%;
+    height: 450px;
+    display: grid;
+    place-items: center;
+    background: url(css/photos/red_background.svg);
+}
+.founder h1{
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: 1rem;
+}
+
+.founder-box{
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+    
+.founder-card{
+    height: 200px;
+    width: 300px;
+    box-shadow: 0px 0px 10px black;
+    background-color: white;
+}
+.founder-img{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    transform: translateY(-90px);
+}
+
+.founder-img img{
+    width: 100%;
+}
+
+.founder-details{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    transform: translateY(-70px);
+}
+
+/* footer***********************************/
+
+
+.footer-container{
+    padding: 10px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-container h3{
+    color: #6B6B6B;
+    margin-bottom: 10px;
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.email-box input[type="email"]{
+    padding: 10px 20px;
+    background-color: transparent;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+    
+}
+
+input[type="button"]{
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 15px;
+}
+
+
+@media screen and (max-width:765px) {
+    nav{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        left: 0;
+    }
+    .nav-logo{
+        z-index: 2;
+    }
+    nav ul{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        transition: all .5s ease-in-out;
+        background: rgba(12, 12, 12, 0.8);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    nav ul li{
+        line-height: 1.6;
+        top: 150px;
+        position: relative;
+
+    }
+
+    .checkbtn{
+        display: block;
+        z-index: 2;
+    }
+    
+    #check:checked~ul{
+        left: 0;
+    }
+
+    header{
+        background: url(css/photos/mb.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+
+    #top-heading{
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 2;
+        font-weight: bold;
+        font-size: 1.6rem;
+        top: 200px;
+        width: 100%;
+        left: 0;
+        background-color: black;
+        opacity: 0.8;
+        text-align: center;
+        position: sticky;
+    }
+
+
+
+
+    #product-h1{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .card{
+        height: 100px;
+        width: 100px;
+        margin: 5px;
+    }
+
+    .card-text{
+        font-size: 10px;
+    }
+
+    .founder{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        background: url(https://images.unsplash.com/photo-1620802902078-e23a85c4a0bc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D);
+        background-position: center;
+        background-size: cover;
+    }
+    .founder h1{
+        font-size: 1.2rem;
+        margin: 10px;
+        color: black;
+    }
+
+    .founder-box{
+        flex-wrap: wrap;
+        gap: 40px; 
+    }
+        
+    .founder-img{
+        padding: 1;
+        transform: translateY(-70px);
+    }
+    .founder-card{
+        height: 100px;
+        width: 150px;
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    .founder-details{
+        font-size: 0.5rem;
+        transform: translateY(-55px);
+    }
+
+    footer{
+        width:100%;
+    }
+    
+
+
+    .footer-container{
+        flex-wrap: wrap;
+    }
+    
+    .footer-container div{     
+        line-height: 1.2;
+        margin: 10px 0px;
+        text-align: center;
+    }
+    .footer-container h3{
+        font-size: 16px;
+        margin-bottom: 5px;
+    
+    }
+    .email-box{
+        text-align: center;
+    ;
+    }
+    .email-box input[type="email"]{
+        padding: 5px 8px;
+        text-align: center;
+
+    }
+    
+    input[type="button"]{
+        padding: 5px 8px;
+
+    }
+}
+
+
+@media (min-width:767px) and (max-width:1023px) {
+    
+    nav{
+        padding: 10px;
+    }
+
+    #top-heading{
+        font-size: 2rem;
+        top: 150px;
+        left: 20px;
+    }
+
+}
+
+@media (min-width:1024px) {
+    #top-heading{
+        font-size: 2.5rem;
+    }
+}

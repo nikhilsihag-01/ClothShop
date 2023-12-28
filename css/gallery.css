@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+li{
+    color: black;
+    list-style-type: none;
+}
+header{
+    background: url(https://images.unsplash.com/photo-1425421669292-0c3da3b8f529?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 20px 40px;
+}
+.nav-logo{
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 0px 10px 10px black;
+}
+
+.checkbtn{
+    font-size: 2rem;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+ul{
+    display: flex;
+    gap: 10px;
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+
+ul li a{
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+ul a:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.75
+    );
+    }
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.container h1{
+    font-size: 2rem;
+    width: 200px;
+    line-height: 1.6;
+    font-style: italic;
+    color: whitesmoke;
+
+}
+.container h1::after{
+    content: "";
+    top: 0;
+    left: 0;
+    padding: 2px;
+    background-color: red;
+    margin: 20px;
+}
+.gallery-box{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 80%;
+    padding: 50px;
+}
+
+.box{
+    width: 150px;
+    height: 300px; 
+    transition: 0.5s;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.box:hover{
+    width: 300px;
+    box-shadow: 0px 0px 12px black;
+}
+
+.box1{
+    background: url(gallery/pics/pic1.jpg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.box2{
+    background: url(gallery/pics/pic2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.box3{
+    background: url(gallery/pics/pic3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.box4{
+    background: url(gallery/pics/pic4.jpg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.box5{
+    background: url(gallery/pics/pic5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.box6{
+    background: url(gallery/pics/pic6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+    
+.about-shop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.about-shop h2{
+    padding: 20px;
+    font-size: 3rem;
+}
+
+.about-shop section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    border: 2px solid black;
+    margin-top: 50px;
+}
+
+.shop-img{
+    width: 500px;
+    height: 400px;
+}
+.shop-img img{
+    width: 100%;
+    height: 100%;
+}
+.shop-details{
+    width: 400px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 2;
+}
+
+.shop-details h1{
+    font-size: 2rem;
+}
+
+
+@media (max-width:765px) {
+
+    nav{
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-logo{
+        z-index: 2;
+    }
+    nav ul{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
+        transition: all .5s ease-in-out;
+        background: rgba(12, 12, 12, 0.8);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    nav ul li{
+        line-height: 1.6;
+        top: 200px;
+        position: relative;
+
+    }
+    nav ul li a{
+        color: white;
+    }
+    .checkbtn{
+        display: block;
+        z-index: 2;
+        color: white;
+    }
+    
+    #check:checked~ul{
+        left: 0;
+        
+    }
+.container{
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container h1{
+    font-size: 1.2rem;
+    /* margin: 20px; */
+    background-color: black;
+    background: rgba(12, 12, 12, 0.8);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 30px;
+    text-align: center;
+}
+
+.gallery-box{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 2px;
+}
+
+.box{
+    width: 80px;
+    height: 80px; 
+    transition: 0.5s;
+    border-radius: 50px;
+    margin: 10px 5px;
+}
+
+.box:hover{
+    width: 80px;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 12px white;
+}
+
+
+    .about-shop{
+        width: 100%;
+        padding: 40px;
+    
+    }
+    .about-shop h2{
+        font-size: 2rem;
+        padding: 10px;
+        text-align: center;
+    }
+    .about-shop section{
+        flex-wrap: wrap;
+        border: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        padding: 10px;
+    }
+    
+    .shop-img{
+        width: 400px;
+        height: 300px;
+    }
+    .shop-details{
+        line-height: 1.5;
+    }
+    
+    .shop-details h1{
+        font-size: 2rem;
+        
+    }
+    
+}
+
+@media (min-width:767px) and (max-width:1023px) {
+    .container{
+        justify-content: center;
+    }
+    .gallery-box{
+        gap: 30px;
+    }
+    
+    .box{
+        width: 80px;
+        height: 200px; 
+        transition: 0.5s;
+    }
+    
+    .box:hover{
+        width: 100px;
+        transform: scale(1.2);
+    }
+    
+    
+.container h1{
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin: 0px 10px;
+    font-style: italic;
+
+        }
+
+        .shop-img{
+            width: 300px;
+            height: 300px;
+        }
+        .shop-details{
+            line-height: 1.1;
+            width: 100%;
+            /* overflow: hidden; */
+        }
+        
+}
