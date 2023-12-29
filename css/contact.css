@@ -110,6 +110,7 @@ label{
 }
 
 textarea{
+    border-radius: 0.5rem;
     background-color: transparent;
     resize: none;
     color: aliceblue;
