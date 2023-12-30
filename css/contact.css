@@ -97,6 +97,7 @@ input{
     background-color: transparent;
     box-shadow: 0px 0px 10px white;
     margin: 10px;
+    cursor: pointer;
 }
 
 input:hover{
@@ -169,8 +170,6 @@ border: 1px solid rgba(23, 23, 23, 0.53);
 
 .email-box input[type="email"]{
     padding: 10px 20px;
-    border: none;
-    /* outline: none; */
     background-color: transparent;
     color: white;
     font-family: "Roboto", sans-serif;
@@ -181,10 +180,11 @@ border: 1px solid rgba(23, 23, 23, 0.53);
 input[type="button"]{
     padding: 5px 10px;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 2rem;
     margin: 10px;
-    color: black;
+    color:white;
     font-size: 15px;
+    background-color: black;
 }
 
 

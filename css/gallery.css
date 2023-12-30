@@ -102,6 +102,7 @@ ul a:hover {
     transition: 0.5s;
     border-radius: 50px;
     text-align: center;
+    cursor: pointer;
 }
 
 .box:hover{
@@ -154,6 +155,7 @@ ul a:hover {
 .about-shop h2{
     padding: 20px;
     font-size: 3rem;
+    text-decoration: underline;
 }
 
 .about-shop section{
@@ -164,6 +166,7 @@ ul a:hover {
     padding: 40px;
     border: 2px solid black;
     margin-top: 50px;
+    border-radius: 0.2rem;
 }
 
 .shop-img{
@@ -171,6 +174,7 @@ ul a:hover {
     height: 400px;
 }
 .shop-img img{
+    border-radius: 0.5rem;
     width: 100%;
     height: 100%;
 }
