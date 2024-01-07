@@ -65,6 +65,7 @@ nav ul a:hover {
     }
 
 .contact{
+    padding: 50px 20px ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,7 +175,7 @@ border: 1px solid rgba(23, 23, 23, 0.53);
     color: white;
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
-    
+    text-align: center;
 }
 
 input[type="button"]{
@@ -230,11 +231,6 @@ input[type="button"]{
         left: 50%;
     }
 
-    .contact{
-        width: 100%;
-        border-bottom: 2px solid black;
-    }
-
     .contact-info{
         flex-direction: column;    
     }
@@ -249,56 +245,43 @@ input[type="button"]{
         text-align: center;
     }
 
-textarea{
-    width: 100%;
-}
+    textarea{
+        width: 80%;
+    }
 
 
-input{
-    font-size: 10px;
-    padding: 5px;
-    margin: 10px;
-}
+    input{
+        font-size: 10px;
+        padding: 5px;
+        margin: 10px;
+    }
 
-.address{
-    text-align: center;
-    width: 200px;
-}
+    .address{
+        text-align: center;
+        width: 200px;
+    }
 
-footer{
-    width: 100%;
-}
+    .footer-container{
+        flex-wrap: wrap;
+    }
 
+    .footer-container div{     
+        line-height: 1.2;
+        margin: 10px 0px;
 
+    }
+    .footer-container h3{
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
 
-.footer-container{
-    flex-wrap: wrap;
-}
+    .email-box input[type="email"]{
+        padding: 5px 8px;
+    }
 
-.footer-container div{     
-    line-height: 1.2;
-    margin: 10px 0px;
-    text-align: center;
-}
-.footer-container h3{
-    font-size: 16px;
-    margin-bottom: 5px;
-
-}
-.email-box{
-    text-align: center;
-;
-}
-.email-box input[type="email"]{
-    padding: 5px 8px;
-    text-align: center;
-
-}
-
-input[type="button"]{
-    padding: 5px 8px;
-
-}
+    input[type="button"]{
+        padding: 5px 8px;
+    }
 
 }
 
